@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCB655382911968000CE08D5 /* CaptionOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB655372911968000CE08D5 /* CaptionOption.swift */; };
 		DCD78219291189EE003F806D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD78218291189EE003F806D /* AppDelegate.swift */; };
 		DCD7821B291189EE003F806D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7821A291189EE003F806D /* SceneDelegate.swift */; };
 		DCD7821D291189EE003F806D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD7821C291189EE003F806D /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DCB655372911968000CE08D5 /* CaptionOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionOption.swift; sourceTree = "<group>"; };
 		DCD78215291189EE003F806D /* Meme Maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme Maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD78218291189EE003F806D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCD7821A291189EE003F806D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				DCD78218291189EE003F806D /* AppDelegate.swift */,
 				DCD7821A291189EE003F806D /* SceneDelegate.swift */,
 				DCD7821C291189EE003F806D /* ViewController.swift */,
+				DCB655372911968000CE08D5 /* CaptionOption.swift */,
 				DCD7821E291189EE003F806D /* Main.storyboard */,
 				DCD78221291189F3003F806D /* Assets.xcassets */,
 				DCD78223291189F3003F806D /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCD7821D291189EE003F806D /* ViewController.swift in Sources */,
+				DCB655382911968000CE08D5 /* CaptionOption.swift in Sources */,
 				DCD78219291189EE003F806D /* AppDelegate.swift in Sources */,
 				DCD7821B291189EE003F806D /* SceneDelegate.swift in Sources */,
 			);
