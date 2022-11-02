@@ -13,7 +13,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         topCaptionSegmentedControl.removeAllSegments()
-    }
+        
+        topCaptionSegmentedControl.selectedSegmentIndex = 0
+        
+        for choice in topChoices { topCaptionSegmentedControl.insertSegment(withTitle: choice.emoji, at: topChoices.count, animated: false)
+        }
+        
+
+        }
+        
+        
+    
 
     @IBOutlet weak var topCaptionSegmentedControl: UISegmentedControl!
     
@@ -23,14 +33,33 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var bottomCaptionLabel: UILabel!
     
-    @IBAction func updateLabels(_ sender: Any) {
-    }
+    let bottomChoices = [CaptionOption(emoji: "😳", caption: "NO WAY!"), CaptionOption(emoji: "😳", caption: "WHAT THE F#%K!")]
     
     let topChoices = [CaptionOption(emoji: "👩🏻‍❤️‍💋‍👨🏾", caption: "SHE CHEATED!?"), CaptionOption(emoji: "😳", caption: "WAIT I WON?!")]
     
-    let bottomChoices = [CaptionOption(emoji: "😳", caption: "NO WAY!"), CaptionOption(emoji: "😳", caption: "WHAT THE F#%K!")]
+    func updateLabels() {
+                let topSelectedIndex = topCaptionSegmentedControl.selectedSegmentIndex
+                topCaptionLabel.text = topChoices[topSelectedIndex].caption
+                let bottomSelectedIndex = bottomCaptionSegmentedControl.selectedSegmentIndex
+                bottomCaptionLabel.text = bottomChoices[bottomSelectedIndex].caption
+            }
     
-   
+    @IBAction func valueChange(_ sender: Any) {
+        
+        updateLabels()
+    }
     
+    @IBAction func TopCaptionPanGestureRecognizer(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .changed { topCaptionLabel.center = sender.location(in: view)
+        }
+        
+    }
+    
+    @IBAction func BottomCaptionPanGestureRecognizer(_ sender: UIPanGestureRecognizer) {
+        if sender.state == .changed { bottomCaptionLabel.center = sender.location(in: view)
+        }
+    }
+    
+ 
 }
 

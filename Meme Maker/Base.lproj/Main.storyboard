@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,7 +24,7 @@
                                     <segment title="😄"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="CQI-ri-gRm"/>
+                                    <action selector="valueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="dqa-mD-h2U"/>
                                 </connections>
                             </segmentedControl>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2095" translatesAutoresizingMaskIntoConstraints="NO" id="Rg9-Fd-TbL">
@@ -34,14 +34,18 @@
                                     <constraint firstAttribute="width" constant="390" id="k6x-pk-URo"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-cm-E3F">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="c2m-cm-E3F">
                                 <rect key="frame" x="20" y="271" width="390" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="3" height="2"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="WRO-sU-Lsy" appends="YES" id="aj3-aq-Ns7"/>
+                                </connections>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yLF-Nl-o14">
                                 <rect key="frame" x="178" y="669" width="75" height="32"/>
@@ -51,17 +55,21 @@
                                     <segment title="🤬"/>
                                 </segments>
                                 <connections>
-                                    <action selector="segmentedControlAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="pH1-eC-din"/>
+                                    <action selector="valueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="6zy-Vd-FZZ"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BOTTOM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rk2-cj-2co">
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="BOTTOM" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rk2-cj-2co">
                                 <rect key="frame" x="20" y="576" width="390" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-Heavy" family="Avenir Next Condensed" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" systemColor="labelColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="3" height="2"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qsU-Cp-4jt" appends="YES" id="Uek-vp-cWc"/>
+                                </connections>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -73,12 +81,22 @@
                     </view>
                     <connections>
                         <outlet property="bottomCaptionLabel" destination="Rk2-cj-2co" id="Ian-sh-Weq"/>
-                        <outlet property="bottomSegmentedControl" destination="yLF-Nl-o14" id="HpI-2h-GHv"/>
+                        <outlet property="bottomCaptionSegmentedControl" destination="yLF-Nl-o14" id="Qzd-w4-M1g"/>
                         <outlet property="topCaptionLabel" destination="c2m-cm-E3F" id="EOj-GE-pvO"/>
-                        <outlet property="topSegmentedControl" destination="5aV-Id-MT2" id="un5-gp-bhG"/>
+                        <outlet property="topCaptionSegmentedControl" destination="5aV-Id-MT2" id="Oj4-Hy-JHm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="WRO-sU-Lsy" userLabel="Top Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="TopCaptionPanGestureRecognizer:" destination="BYZ-38-t0r" id="zlm-cG-rKf"/>
+                    </connections>
+                </panGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="qsU-Cp-4jt" userLabel="Bottom Pan Gesture Recognizer">
+                    <connections>
+                        <action selector="BottomCaptionPanGestureRecognizer:" destination="BYZ-38-t0r" id="Bhp-Zx-e6O"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="47.441860465116278" y="-2.5751072961373391"/>
         </scene>
